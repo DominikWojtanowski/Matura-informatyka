@@ -1,0 +1,45 @@
+# Ignorowanie plików systemu operacyjnego
+.DS_Store           # Pliki systemu macOS
+Thumbs.db           # Pliki systemu Windows
+
+# Ignorowanie plików i folderów generowanych przez IDE
+.vscode/            # Katalog ustawień VSCode
+.idea/              # Katalog ustawień JetBrains IDE (IntelliJ, PyCharm, itp.)
+*.sublime-workspace # Pliki robocze Sublime Text
+*.sublime-project   # Projekty Sublime Text
+
+# Ignorowanie plików kompilacji i wyników budowania
+*.class             # Pliki klasy Java
+*.o                 # Pliki obiektowe (kompilacja C/C++)
+*.out               # Pliki wynikowe kompilacji
+*.log               # Pliki dzienników
+*.exe               # Pliki wykonywalne
+*.dll               # Biblioteki dynamiczne
+*.so                # Biblioteki dynamiczne (Linux)
+*.a                 # Biblioteki statyczne
+*.lib               # Biblioteki statyczne
+*.bin               # Pliki binarne
+
+# Ignorowanie plików środowiskowych i konfiguracyjnych
+.env                # Plik z ustawieniami środowiska (np. zmienne środowiskowe)
+*.env               # Wszystkie pliki .env
+.vscode/settings.json  # Plik ustawień VSCode
+.idea/.idea         # Ustawienia IDE JetBrains
+
+# Ignorowanie folderów z zależnościami (np. Node.js, Python)
+node_modules/       # Folder z zależnościami Node.js
+bower_components/   # Folder z zależnościami Bower
+venv/               # Wirtualne środowisko Python (dla np. Python)
+__pycache__/        # Katalogi zawierające pliki cache Pythona
+
+# Ignorowanie plików kompilacji Front-End (np. NPM)
+dist/               # Folder z wygenerowanymi plikami (np. dla NPM, Webpack)
+build/              # Folder z plikami wynikowymi dla innych narzędzi kompilacji
+
+# Ignorowanie plików tymczasowych systemu operacyjnego
+*.swp               # Pliki swap z edytora Vim
+*.bak               # Kopie zapasowe
+*.tmp               # Pliki tymczasowe
+
+# Ignorowanie plików logów
+*.log               # Pliki logów

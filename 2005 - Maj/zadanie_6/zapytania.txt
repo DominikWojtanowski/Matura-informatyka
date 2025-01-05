@@ -1,0 +1,13 @@
+dla podpunkt b
+
+SELECT (SELECT miasta.city_name FROM miasta WHERE miasta.id = 3) as miasto, panstwa.short_name as kraj,COUNT(panstwa.short_name) as ilosc_zawodnikow FROM playerpointtemplate INNER JOIN zawodnicy ON playerpointtemplate.player_id = zawodnicy.id INNER JOIN panstwa ON zawodnicy.short_country_name = panstwa.short_name WHERE playerpointtemplate.city_id = 3 GROUP BY panstwa.short_name order by (playerpointtemplate.first_note + playerpointtemplate.second_note) limit 30;
+
+dla podpunkt c
+
+SELECT ROW_NUMBER() over (ORDER BY(playerpointtemplate.first_note + playerpointtemplate.second_note) DESC) as miejsce, zawodnicy.name as 'imie i nazwisko', zawodnicy.short_country_name as 'kraj', playerpointtemplate.first_jump as 'pierwszy skok',
+playerpointtemplate.second_jump as 'drugi skok', (ROUND(playerpointtemplate.first_note + playerpointtemplate.second_note)) as 'laczna nota' FROM playerpointtemplate INNER JOIN zawodnicy ON playerpointtemplate.player_id = zawodnicy.id inner JOIN miasta on playerpointtemplate.city_id = miasta.id where miasta.id = 1;
+
+dla podpunkt d, musze zmienic odpowiednio miasta.id:
+
+WITH adam_malysz as (SELECT ROW_NUMBER() over (ORDER BY(playerpointtemplate.first_note + playerpointtemplate.second_note) DESC) as miejsce, playerpointtemplate.player_id as 'id', zawodnicy.name as 'imie i nazwisko', zawodnicy.short_country_name as 'kraj', playerpointtemplate.first_jump as 'pierwszy skok',
+playerpointtemplate.second_jump as 'drugi skok', (ROUND(playerpointtemplate.first_note + playerpointtemplate.second_note)) as 'laczna nota' FROM playerpointtemplate INNER JOIN zawodnicy ON playerpointtemplate.player_id = zawodnicy.id inner JOIN miasta on playerpointtemplate.city_id = miasta.id where miasta.id = 1) SELECT * FROM adam_malysz where id=1;

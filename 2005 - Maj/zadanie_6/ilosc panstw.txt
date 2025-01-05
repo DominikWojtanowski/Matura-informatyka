@@ -1,0 +1,33 @@
+Zakopane: 
+
+AUT: 7
+POL: 4
+FIN: 3
+SLO: 3
+GER: 6
+NOR: 6
+
+Kuusamo:
+
+SUI: 1
+GER: 3
+CZE: 2
+SLO: 3
+JPN: 3
+USA: 1
+FIN: 6
+AUT: 5
+NOR: 4
+POL: 1
+
+Trodheim:
+
+SLO: 4
+SUI: 1
+JPN: 2
+FRA: 1
+POL: 1
+FIN: 4
+AUT: 3
+GER: 6
+NOR: 7

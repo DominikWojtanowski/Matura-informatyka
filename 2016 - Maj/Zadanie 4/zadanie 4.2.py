@@ -1,0 +1,22 @@
+import math
+
+with open('punkty.txt','r+') as file:
+    COORDS = [line.replace('\n','').split(' ') for line in file.readlines()]
+    # COORDS = COORDS[:1000]
+    # COORDS = COORDS[:5000]
+    ileWOkregu = 0
+    ileWKwadracie = 0
+    poleKwadratu = 400 * 400
+    pi = 0
+    r = 200
+    a, b = 200, 200
+    for idx, (x, y) in enumerate(COORDS, start=1):
+        intX, intY = int(x), int(y)
+        wynik = math.sqrt(math.pow(intX - a,2) + math.pow(intY - b, 2))
+        if wynik <= r and wynik >= 0:
+            ileWOkregu += 1
+        ileWKwadracie += 1
+
+        pi = (ileWOkregu * poleKwadratu) / (ileWKwadracie * (r ** 2))
+
+    print(round(pi,4))

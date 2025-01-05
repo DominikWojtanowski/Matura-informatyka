@@ -1,0 +1,7 @@
+
+najwczesniejsza C = 130:
+
+wierzcholek 1: (30, -17)
+wierzcholek 2: (30, 9)
+wierzcholek 3: (130 , -17)
+wierzcholek 4: (130, 9)

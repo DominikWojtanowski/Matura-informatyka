@@ -1,0 +1,2 @@
+Najwiekszy lenght: 28, password: DCBAJAHHJIGABCDCCDCBAGIJHHAJ
+Najmiejszy length: 4, password: EHJA
